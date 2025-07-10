@@ -1,0 +1,16 @@
+{
+    "name": "backend-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "@hapi/hapi": "^21.0.0",
+      "@google-cloud/firestore": "^6.5.0",
+      "@google-cloud/storage": "^6.9.0",
+      "uuid": "^9.0.0",
+      "@tensorflow/tfjs-node": "^4.6.0"
+    }
+  }
+  

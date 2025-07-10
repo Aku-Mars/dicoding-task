@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ 
+body {
+  background-color: #FFFBE6;
+  color: #333333; 
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ 
+h1, h2, h3  {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2, h3 {
+  color: #2c7873;
+  margin: 30px 0px;
+}
+
+h2 {
+  margin-bottom: 45px;
+}
+ 
+footer {
+  padding: 20px;
+  background-color: #2c7873;
+  color: white;
+ 
+  text-align: center;
+  font-weight: bold;
+}
+ 
+nav a {
+  font-size: 18px;
+ 
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: white;
+}
+ 
+nav a:hover {
+  color: #6fb98f;
+  transition: color 0.3s;
+}
+ 
+.profile header {
+  text-align: center;
+}
+ 
+.featured-image {
+  width: 100%;
+  max-height: 500px;
+ 
+  object-fit: cover;
+  object-position: center;
+}
+ 
+.profile img {
+  max-width: 200px;
+  margin: 20px
+}
+ 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 35px;
+  text-align: justify;
+  font-size: 18px;
+}
+ 
+.jumbotron {
+  font-size: 20px;
+  padding: 40px;
+  text-align: center;
+  background-color: #6fb98f;
+  color: white;
+}
+ 
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+ 
+  gap: 2rem;
+}
+ 
+nav li {
+  list-style-type: none;
+}
+ 
+nav {
+  background-color: #2c7873;
+  padding: 5px;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+}
+ 
+main {
+  padding: 20px;
+ 
+  display: flex;
+  gap: 1.5rem;
+}
+ 
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+ 
+aside {
+  flex: 1;
+}
+ 
+header {
+  display: inline;
+}
+
+#menu-toggle {
+  display: none;
+  background-color: #2c7873;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.slider {
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+.slides {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-image {
+  max-height: 500px;
+  width: 100%;
+  display: none;
+}
+
+.active-slide {
+  display: block;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+button:hover {
+  background-color: #3b8686;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; 
+  font-size: 16px;
+}
+
+th, td {
+  padding: 10px 20px; 
+  text-align: left;
+  border: 2px solid #ddd; 
+}
+
+th {
+  background-color: #2c7873;
+  color: white;
+}
+
+td {
+  background-color: #f2f2f2;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+ 
+  main aside {
+    align-self: center;
+  }
+}
+ 
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  #menu-toggle {
+    display: flex;
+    margin-left: 43%;
+  }
+
+  #nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #2c7873;
+  }
+
+  #nav-list li {
+    margin: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+  }
+
+  nav a {
+    color: white;
+    padding: 10px;
+    display: block;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+}
+
+/* Perangkat dengan lebar layar 480px dan di bawahnya (ponsel kecil) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .jumbotron {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  nav ul {
+    padding-inline: 1rem;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .featured-image {
+    max-height: 300px;
+  }
+
+  .slides img {
+    max-height: 300px;
+  }
+
+  .slider button {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  aside {
+    display: none;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "bookshelf",
+    "version": "1.0.0",
+    "description": "Final Aplikasi Back-End",
+    "author": "Muhamad Arifin Syam",
+    "main": "src/server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node src/server.js"
+    },
+    "dependencies": {
+        "nanoid": "^4.0.2"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.14.0",
+        "eslint": "^9.14.0",
+        "globals": "^15.12.0"
+    }
+}
